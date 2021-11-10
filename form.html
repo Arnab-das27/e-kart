@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validContact() {
+            var con = document.getElementById("contact").value;
+
+            if (con.length != 10) {
+                document.getElementById("contact_info").innerHTML = "Invalid";
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <div>
+            <label>Phone</label>
+            <input type="text" id="contact" placeholder="Enter your number" onblur="validContact()" />
+
+            <span id="contact_info" style="color: red;"></span>
+        </div>
+    </form>
+
+</body>
+
+</html>
